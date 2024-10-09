@@ -23,6 +23,6 @@ namespace KeyMaster_Models
         [ForeignKey("IdNguoiDung")]
         public virtual NguoiDung? NguoiDung { get; set; }
 
-        public virtual ICollection<GioHangCT> GioHangCTs { get; set; }
+        public virtual ICollection<GioHangCT> GioHangCTs { get; set; } = new List<GioHangCT>();
     }
 }
