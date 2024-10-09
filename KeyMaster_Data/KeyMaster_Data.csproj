@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\KeyMaster_Models\KeyMaster_Models.csproj" />
+  </ItemGroup>
+
 </Project>

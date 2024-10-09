@@ -34,14 +34,9 @@ namespace KeyMaster_Models
         [ForeignKey("NguoiDung")] // Chỉ định khóa ngoại cho người dùng
         public Guid IdNguoiDung { get; set; }
 
-        [ForeignKey("HoaDon")] // Chỉ định khóa ngoại cho hóa đơn
-        public Guid IdHoaDon { get; set; }
-
         // Tham chiếu tới NguoiDung
         public virtual NguoiDung NguoiDung { get; set; }
-
-        // Tham chiếu tới HoaDon
-        public virtual HoaDon HoaDon { get; set; }
+        public virtual ICollection<HoaDon> HoaDons { get; set; }
     }
 
 }

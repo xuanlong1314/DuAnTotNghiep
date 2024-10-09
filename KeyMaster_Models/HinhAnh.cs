@@ -20,10 +20,6 @@ namespace KeyMaster_Models
         public string FileType { get; set; } // File type (jpg, png, etc.)
 
         public byte[] Data { get; set; } // Image data as byte array
-
-        public Guid IdSanPham { get; set; } // Foreign key to product
-
-        [ForeignKey("IdSanPham")]
-        public virtual SanPham SanPham { get; set; }
+        public virtual ICollection<SanPham> SanPhams { get; set; } // Navigation property to SanPham
     }
 }
